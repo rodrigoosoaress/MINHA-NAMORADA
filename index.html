@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Namorada</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+            margin: 0;
+        }
+        .heart {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: red;
+            transform: rotate(-45deg);
+            animation: pulse 1s infinite alternate;
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -100px;
+            left: 0;
+        }
+        .heart:after {
+            left: 100px;
+            top: 0;
+        }
+        .heart img {
+            position: absolute;
+            top: 3%;
+            left: 32%;
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 100%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            border: 5px solid white;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1) rotate(-45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.2) rotate(-45deg);
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <img src="minha-namorada.jpg" alt="Minha Namorada">
+    </div>
+</body>
+</html>
